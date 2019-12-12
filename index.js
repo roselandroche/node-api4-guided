@@ -15,7 +15,8 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
 	res.json({
 		message: "Welcome to our API",
-		cohort: process.env.LAMBDA_COHORT
+		cohort: process.env.LAMBDA_COHORT,
+		secret: process.env.SUPER_SECRET_API_KEY
 	})
 })
 
